@@ -28,7 +28,6 @@
     flex-grow: 2;
     font-weight: bold;
     justify-content: flex-end;
-    color: rgb(27 33 65);
 }
 
 .navbar-links li
@@ -36,6 +35,12 @@
     cursor: pointer;
     position: relative; 
     padding-bottom: 5px;
+}
+
+.navbar-links li a
+{
+    text-decoration: none;
+    color: rgb(27 33 65);
 }
 
 .navbar-links li::after {
@@ -46,10 +51,18 @@
     width: 0;
     height: 2px; 
     background: rgb(27 33 65); 
-    border-bottom: 1px dotted aqua; 
+    /* border-bottom: 1px dotted aqua;  */
     transition: width 0.4s ease-in-out; 
 }
 
 .navbar-links li:hover::after {
     width: 100%; 
 }
+
+.navbar-links li a:active {
+    color: coral; /* Color when item is active/selected */
+}
+/* 
+.navbar-links li:active::after {
+    background: coral; 
+} */
