@@ -1,22 +1,23 @@
-import React from 'react'
-import './card.css'
+import React from 'react';
+import './card.css';
+import { useNavigate } from 'react-router-dom';
 
-
-const card = () => {
+const Card = ({ title, description, img_url, onClick }) => {
     return (
-        <div class="container">
-            <div class="wrapper">
-                <div class="banner-image"> </div>
-                <h1> Linear Regression </h1>
-                <p>Lorem ipsum dolor sit amet, <br />
-                    consectetur adipiscing elit.</p>
+        <div className="container">
+            <div className="wrapper">
+                <div>
+                    <img src={img_url} alt="display" className="banner-image" />
+                </div>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </div>
-            <div class="button-wrapper">
-                <button class="btn outline">DETAILS</button>
-                <button class="btn fill">Visualize</button>
+            <div className="button-wrapper">
+                <button className="btn outline">DETAILS</button>
+                <button className="btn fill" onClick={onClick}>Visualize</button> {/* Use the onClick prop here */}
             </div>
         </div>
-  )
-}
+    );
+};
 
-export default card
+export default Card;

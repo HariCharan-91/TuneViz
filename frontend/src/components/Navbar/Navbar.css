@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background-color: rgb(245, 243, 239);
+    background-color: rgb(255, 255, 255);
     backdrop-filter: saturate(180%) blur(30px);
     justify-content: space-between;
     color: white;

@@ -4,7 +4,7 @@ import Card from "../Card/card"
 const Hero = () => {
   return (
     <div>
-      <Card/>
+      Hero
     </div>
   )
 }
