@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './dl.css';
 
-const dl = () => {
+function DL() {
+  
   return (
-    <div>
-      <h1>DL</h1>
-    </div>
-  )
+    <div>DL</div>
+  );
 }
 
-export default dl
+export default DL;

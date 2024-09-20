@@ -1,6 +1,310 @@
-.ml-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    padding: 16px;
+
+/* Container for the main section */
+.main-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.main-section-header
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section-set
+{
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.main-section-banner img
+{
+    height: 450px;
+    border-radius: 10px;
+    background-image: inherit;
+}
+
+/* Card container styling */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Individual card styling */
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card .card-info h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.card .card-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Styling for the text
+/* Styling for the text and button section */
+.text-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+  
+  .text-and-button .description {
+    flex: 1;
+  }
+  
+  .text-and-button .description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .text-and-button .description p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .text-and-button .button-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-and-button .button-container a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .text-and-button .button-container a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"); */
+
+/* Main container class */
+.ml .navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.ml .navbar button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.ml .navbar button:hover {
+  color: #007bff;
+}
+
+/* Add underline to the active button */
+.ml .navbar button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s;
+}
+
+.ml .navbar button:not(.active)::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s, left 0.3s;
+}
+
+.ml .navbar button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Container for the cards */
+.ml .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+/* Individual card styling */
+.ml .unique-card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Styling for the content inside each card */
+.ml .unique-card .unique-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.ml .unique-card .unique-box:hover {
+  transform: translateY(-50px);
+}
+
+.ml .unique-card .unique-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Background color for the content */
+.ml .unique-card .unique-content {
+  background-color: rgba(42, 43, 47, 0.85); /* Semi-transparent background for the content */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  width: 80%; /* Adjust width so content fits well inside the box */
+}
+
+.ml .unique-card .unique-content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.ml .unique-card .unique-content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.ml .unique-card .unique-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.ml .unique-card .unique-content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.ml .unique-card .unique-content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
 }

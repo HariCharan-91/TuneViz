@@ -1,6 +1,5 @@
 import React from 'react';
 import './card.css';
-import { useNavigate } from 'react-router-dom';
 
 const Card = ({ title, description, img_url, onClick }) => {
     return (
