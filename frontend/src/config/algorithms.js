@@ -9,9 +9,10 @@ export const algorithms = [
         route: 'linear_regression',
         img_url: linearRegImg,
         parameters: [
-            { name: 'Learning Rate', type: 'slider', min: 0, max: 1, step: 0.01, defaultValue: 0.01 },  // Added step for precision
-            { name: 'Iterations', type: 'slider', min: 100, max: 1000, step: 50, defaultValue: 500 },  // Removed duplicate Itera
-        ]
+            { name: 'Learning Rate', type: 'slider', min: 0, max: 1, step: 0.01, defaultValue: 0.01 },
+            { name: 'Iterations', type: 'slider', min: 100, max: 1000, step: 50, defaultValue: 500 },
+        ],
+        types: ['Regression']
     },
     {
         title: 'Logistic Regression',
@@ -19,9 +20,10 @@ export const algorithms = [
         route: 'logistic_regression',
         img_url: logisticRegImg,
         parameters: [
-            { name: 'Regularization', type: 'slider', min: 0, max: 1, step: 0.1, defaultValue: 0.1 },  // Added step for regularization
-            { name: 'Penalty', type: 'dropdown', options: ['l1', 'l2'], defaultValue: 'l2' },  // Added defaultValue for dropdown
-        ]
+            { name: 'Regularization', type: 'slider', min: 0, max: 1, step: 0.1, defaultValue: 0.1 },
+            { name: 'Penalty', type: 'dropdown', options: ['l1', 'l2'], defaultValue: 'l2' },
+        ],
+        types: ['Classification', 'Regression']
     },
     {
         title: 'Decision Tree',
@@ -29,8 +31,19 @@ export const algorithms = [
         route: 'decision_tree',
         img_url: decisionTreeImg,
         parameters: [
-            { name: 'Max Depth', type: 'slider', min: 1, max: 20, step: 1, defaultValue: 5 },  // Added step for Max Depth
-            { name: 'Criterion', type: 'dropdown', options: ['gini', 'entropy'], defaultValue: 'gini' },  // Added defaultValue for dropdown
-        ]
+            { name: 'Max Depth', type: 'slider', min: 1, max: 20, step: 1, defaultValue: 5 },
+            { name: 'Criterion', type: 'dropdown', options: ['gini', 'entropy'], defaultValue: 'gini' },
+        ],
+        types: ['Classification', 'Regression']
+    },
+    {
+        title: 'K-Means Clustering',
+        description: 'Cluster data into K distinct groups.',
+        route: 'k_means',
+        img_url: 'url-to-k-means-image.jpg',
+        parameters: [
+            { name: 'Number of Clusters', type: 'slider', min: 1, max: 10, step: 1, defaultValue: 3 },
+        ],
+        types: ['Clustering']
     }
 ];
