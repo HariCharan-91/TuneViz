@@ -16,7 +16,7 @@ function ML() {
   const handleReadMore = (type, subcategory) => {
     navigate(`/ml/${type.toLowerCase()}/${subcategory.toLowerCase()}`);
   };
-
+  
   return (
      <div className="ml">
       <div className="main-section">
