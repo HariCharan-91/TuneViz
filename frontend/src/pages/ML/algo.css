@@ -1,6 +1,5 @@
 .ml-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 16px;
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
