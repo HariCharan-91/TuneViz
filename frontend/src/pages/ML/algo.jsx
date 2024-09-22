@@ -15,6 +15,7 @@ const Algos = () => {
 
     const selectedCategory = categories[type.charAt(0).toUpperCase() + type.slice(1)];
     const selectedSubcategory = selectedCategory?.find(sub => sub.title.toLowerCase() === category.toLowerCase());
+   
 
     if (!selectedSubcategory) return <div>Category not found</div>;
 

@@ -6,15 +6,16 @@ import { useParams } from 'react-router-dom';
 const Vizalgo = () => {
   const { algorithm } = useParams();  // Get the algorithm from the URL
   const [paramValues, setParamValues] = useState({});
-
+  
   // Find the selected algorithm object
-  const selectedAlgorithm = algorithms.find(algo => algo.route === algorithm);
+  const selectedAlgorithm = algorithms.find((algo) => algo.title.toLowerCase() === algorithm);
   const algoParams = selectedAlgorithm ? selectedAlgorithm.parameters : [];
 
   useEffect(() => {
     if (algoParams.length > 0) {
       const initialValues = algoParams.reduce((acc, param) => {
-        acc[param.name] = param.defaultValue || param.min || '';
+        // Set dropdown values or use defaultValue for sliders
+        acc[param.name] = param.defaultValue || param.options?.[0] || param.min || '';  // Handle dropdown default values
         return acc;
       }, {});
       setParamValues(initialValues);
@@ -24,7 +25,7 @@ const Vizalgo = () => {
   const handleChange = (name, value) => {
     setParamValues((prevValues) => ({
       ...prevValues,
-      [name]: parseFloat(value),  // Ensure values are stored as floats
+      [name]: value,  // Store dropdown value as is (no need for parseFloat here)
     }));
   };
 
@@ -53,7 +54,7 @@ const Vizalgo = () => {
           <label htmlFor={param.name}>{param.name}</label>
           <select
             id={param.name}
-            value={paramValues[param.name] || ''}
+            value={paramValues[param.name] || ''}  // Ensure it's controlled properly
             onChange={(e) => handleChange(param.name, e.target.value)}
           >
             {param.options.map((option, idx) => (
