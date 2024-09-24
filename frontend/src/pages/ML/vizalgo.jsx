@@ -36,6 +36,7 @@ const Vizalgo = () => {
           <label htmlFor={param.name}>
             {param.name}: {paramValues[param.name]} {/* Display the current slider value */}
           </label>
+
           <input
             type="range"
             id={param.name}
@@ -78,14 +79,15 @@ const Vizalgo = () => {
     <div className="page-container">
       <div className="sidebar">
         <h2>Model Parameters for {algorithm.replace('_', ' ')}</h2>
+        <hr/>
         {algoParams.length > 0 ? (
           algoParams.map((param, index) => renderParameter(param, index))
         ) : (
           <p>No parameters found for this algorithm.</p>
         )}
         {/* Add the button to create JSON */}
-        <button className="create-json-btn" onClick={handleCreateJson}>
-          Create JSON
+        <button className="sidebar-button" onClick={handleCreateJson}>
+          Predict
         </button>
       </div>
       <div className="main-content">

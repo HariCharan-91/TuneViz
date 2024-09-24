@@ -71,8 +71,10 @@ p {
 
 .outline {
   background: transparent;
-  color: rgba(0, 212, 255, 0.9);
-  border: 1px solid rgba(0, 212, 255, 0.6);
+  /* color: rgba(0, 212, 255, 0.9); */
+  color: #7119dd;
+  /* border: 1px solid rgba(0, 212, 255, 0.6); */
+  border: 1px solid #7119dd;
   transition: all .3s ease;
   
 }
@@ -85,7 +87,8 @@ p {
 }
 
 .fill {
-  background: rgba(0, 212, 255, 0.9);
+  /* background: rgba(0, 212, 255, 0.9); */
+  background: linear-gradient(135deg, #B388FF, #6200EA);
   color: rgba(255,255,255,0.95);
   filter: drop-shadow(0);
   font-weight: bold;
